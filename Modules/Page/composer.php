@@ -1,0 +1,11 @@
+<?php
+
+view()->composer([
+    'setting::dashboard.index',
+    'setting::dashboard.client.index',
+], \Modules\Page\ViewComposers\Dashboard\PageComposer::class);
+
+
+view()->composer(['apps::frontend.layouts.app'], \Modules\Page\ViewComposers\FrontEnd\PageComposer::class);
+
+view()->composer(['apps::frontend.layouts.*'], \Modules\Page\ViewComposers\FrontEnd\PageComposer::class);
